@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Color Background</title>
+<style>
+		body {
+			display: flex; /* use flexbox to center button */
+			justify-content: center; /* horizontally center button */
+			align-items: center; /* vertically center button */
+			height: 100vh; /* set canvas height to full viewport height */
+		}
+		button {
+			font-size: 1.5rem; /* increase font size for visibility */
+			font-weight: bold;
+			color: white; 
+			background-color: black ;
+			border-radius: 20px;
+			padding: 50px;
+			/*padding-left: 50px;*/
+			/*padding-right: 50px;*/
+			border: none;
+
+		}
+	</style>
+</head>
+<body>
+	<button onclick="changeBackgroundColor()" style="align-content: center;" id = "god" >Change Background Color</button>
+	
+	<script>
+		function changeBackgroundColor() {
+			/* generate random RGB values for background color */
+			var red = Math.floor(Math.random() * 256);
+			var green = Math.floor(Math.random() * 256);
+			var blue = Math.floor(Math.random() * 256);
+			
+			/* set new background color using generated RGB values */
+			var color = "rgb(" + red + "," + green + "," + blue + ")";
+			document.body.style.backgroundColor = 
+			document.getElementById("god").style.color = color;
+
+			// button.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+		}
+	</script>
+</body>
+</html>
